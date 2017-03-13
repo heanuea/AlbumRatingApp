@@ -1,7 +1,9 @@
 <h1>Edit Album </h1>
 
-
-<%= render 'form' %>
-
-
-<%= link_to "Back", root_path %>
+<%= simple_form_for @album, html: {multipart: true} do |f| %>
+<%= f.select :category_id, @categories %>
+  <%= f.input :title %>
+  <%= f.input :info %>
+  <%= f.input :artist %>
+  <%= f.button :submit %>
+<% end %>

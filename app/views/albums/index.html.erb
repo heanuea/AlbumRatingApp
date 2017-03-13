@@ -1,4 +1,9 @@
-<% @albums.each do |album| %>
-<h2><%= link_to album.title, album_path(album) %></h2>
-<% end %>
+<h1.class="current-category"><%= params[:category] %></h1>
 
+<% if @albums.count == 0 %>
+	<h3>There are no Albums here </h3>
+<% else%>
+	<% @albums.each do |album| %>
+		<h2><%= link_to album.title, album_path(album) %></h2>
+<% end %>
+<% end %>
