@@ -1,5 +1,8 @@
 class ReviewsController < ApplicationController
 	before_action :find_album
+	before_action :find_review, only: [:edit, :update, :destroy]
+
+
 	def new
 		@review = Review.new
 	end
@@ -16,13 +19,34 @@ class ReviewsController < ApplicationController
 		end
 	end
 
+	def edit
+	end
+
+	def update
+		if @review.update(review_params)
+			redirect_to album_path(@album)
+			else
+				render 'edit'
+		end
+	end
+
+def destroy
+	@review.destroy
+	redirect_to album_path(@album)
+
+end
+
 	private
 
 		def review_params
 			params.require(:review).permit(:rating, :comment)
-	end
+		end
 
 		def find_album
 			@album = Album.find(params[:album_id])
 		end
-end
+
+		def find_review
+		@review = Review.find(params[:id])
+		end
+	end
