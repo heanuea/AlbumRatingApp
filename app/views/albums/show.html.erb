@@ -1,8 +1,19 @@
 <h2><%= @album.title %></h2>
-<h3><%= @album.artist %></h3>
+<h3><span><em>From:  </em></span><%= @album.artist %></h3>
 <h4><%= @album.category.name %></h4>
 <p><%= @album.info %></p>
 
+<div class="row">
+		<div class="col-md-12">
+			<div class="reviews">
+	 					<h1> Reviews </h1>
+						<%= render @album.reviews %>
+	 			<div>
+	 					<%= link_to "Add Reviews", new_album_review_path(@album), class: "btn-custom"%>
+	 			</div>
+			</div>
+		</div>
+</div>
 
 <div class="links btn-group">
 <% if user_signed_in? %>
