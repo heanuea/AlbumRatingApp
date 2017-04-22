@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,17 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314192216) do
+ActiveRecord::Schema.define(version: 20170421111812) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "title"
     t.text     "info"
     t.string   "artist"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "user_id"
     t.integer  "category_id"
-  end
+    t.string   "album_img_file_name"
+    t.string   "album_img_content_type"
+    t.integer  "album_img_file_size"
+    t.datetime "album_img_updated_at"
+  end 
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -50,8 +55,10 @@ ActiveRecord::Schema.define(version: 20170314192216) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
 end
+

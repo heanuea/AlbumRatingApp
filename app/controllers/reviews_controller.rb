@@ -1,12 +1,14 @@
 class ReviewsController < ApplicationController
 	before_action :find_album
 	before_action :find_review, only: [:edit, :update, :destroy]
+	before_action :authenticate_user!, only: [:new, :edit]
 
 
 	def new
 		@review = Review.new
 	end
-
+    
+    #render is there to save the comment if refreshed 
 	def create
 		@review = Review.new(review_params)
 		@review.album_id = @album.id
@@ -20,33 +22,35 @@ class ReviewsController < ApplicationController
 	end
 
 	def edit
+	    @review = Review.find(params[:id])
 	end
 
 	def update
 		if @review.update(review_params)
 			redirect_to album_path(@album)
 			else
-				render 'edit'
+				render 'edit' 
 		end
 	end
 
-def destroy
+    def destroy
 	@review.destroy
 	redirect_to album_path(@album)
 
-end
+    end
 
 	private
 
-		def review_params
+	def review_params
 			params.require(:review).permit(:rating, :comment)
-		end
-
-		def find_album
-			@album = Album.find(params[:album_id])
-		end
-
-		def find_review
-		@review = Review.find(params[:id])
-		end
 	end
+
+	def find_album
+			@album = Album.find(params[:album_id])
+	end
+
+	def find_review
+		@review = Review.find(params[:id])
+	end
+	
+end

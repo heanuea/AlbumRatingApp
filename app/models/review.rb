@@ -1,4 +1,4 @@
-class Review < ApplicationRecord
-	belongs_to :album
-	belongs_to :user
+class Review < ActiveRecord::Base
+    belongs_to :album
+    belongs_to :user
 end

@@ -3,7 +3,13 @@
 <% if @albums.count == 0 %>
 	<h3>There are no Albums here </h3>
 <% else%>
+<div class="row">
 	<% @albums.each do |album| %>
-		<h2><%= link_to album.title, album_path(album) %></h2>
+	<div  class="col-md-3">
+	    <a href="/albums/ <%= album.id %>">
+	        <%= image_tag album.album_img.url(:album_index), class: "album" %>
+	    </a>
+	    </div>
 <% end %>
+</div>
 <% end %>

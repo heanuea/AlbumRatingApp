@@ -1,9 +1,17 @@
+<div class= "ol-md-10 col-md-offset-1">
+<div class="new-album-form">
+
+
 <h1>Edit Album </h1>
 
 <%= simple_form_for @album, html: {multipart: true} do |f| %>
-<%= f.select :category_id, @categories %>
+ <%= f.file_field :album_img %></br>
+ 
+<%= f.select :category_id, @categories %></br> 
   <%= f.input :title %>
   <%= f.input :info %>
   <%= f.input :artist %>
   <%= f.button :submit %>
 <% end %>
+</div>
+</div>

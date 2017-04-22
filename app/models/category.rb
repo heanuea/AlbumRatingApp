@@ -1,3 +1,3 @@
-class Category < ApplicationRecord
-	has_many :albums
+class Category < ActiveRecord::Base
+    has_many :albums 
 end
