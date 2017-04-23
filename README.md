@@ -1,7 +1,13 @@
 # **_Album Rating App_**
-This is a ruby on rails web application, the App itsef you can create a user with name and password.
-Than with that each user can download a album cover and rate that album with a star rating.
-This is a college 3rd year project the documentation is up within the files or you can download it here.[Documentation](https://github.com/heanuea/AlbumRatingApp/blob/master/Documentation%20of%20the%20project.docx)
+- This is a ruby on rails web application.
+- create a user with name and password.
+- user can download a album cover and rate that album with a star rating.
+
+This is a college 3rd year project,
+the Design Document is up within the files or you can download it here.
+[Design Document](https://github.com/heanuea/AlbumRatingApp/blob/master/Documentation%20of%20the%20project.docx)
+
+You can visit the wiki i have the design document up there to [wiki](https://github.com/heanuea/AlbumRatingApp/wiki)
 
 ## **_Getting Started_**
 To run the project on your local machine you need to download ruby installer all is given on documatation folder above.
@@ -68,8 +74,15 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 This project is licensed under the GMIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+## References
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* httphttp://installrails.com/steps/see_it_live://railsinstaller.org/en
+* http://installrails.com/steps/see_it_live
+* http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/
+* https://www.youtube.com/watch?v=OHgXELONyTQ
+* https://rubygems.org/gems/bootstrap-sass
+* https://github.com/twbs/bootstrap-sass
+* https://rubygems.org/gems/simple_form
+* http://onemonthrails.com/
+* https://www.youtube.com/watch?v=d6CyzPPpvsU&list=UUNfv9RDwdnBUMlTjbgr7dKw&index=6
+* https://www.youtube.com/watch?v=i2x995hm8r8&list=WL&index=30&t=1921s
