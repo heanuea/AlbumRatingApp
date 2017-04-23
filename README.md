@@ -79,3 +79,5 @@ This project is licensed under the GMIT License - see the [LICENSE.md](LICENSE.m
 * http://onemonthrails.com/
 * https://www.youtube.com/watch?v=d6CyzPPpvsU&list=UUNfv9RDwdnBUMlTjbgr7dKw&index=6
 * https://www.youtube.com/watch?v=i2x995hm8r8&list=WL&index=30&t=1921s
+* http://www.rubydoc.info/gems/paperclip
+* https://www.tutorialspoint.com/ruby-on-rails/rails-file-uploading.htm
