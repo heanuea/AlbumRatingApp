@@ -61,6 +61,11 @@ To watch some training videos, visit http://www.youtube.com/user/c9ide
 
 To deploy the project you need to have the rails or to go online onto clou9.io 
 
+### **_Video Demo_**
+[![Everything Is AWESOME](https://cldup.com/SUatCywquC.jpg))](https://www.youtube.com/watch?v=TPJXji6SM9U"Everything Is AWESOME")
+
+
+
 ## Authors
 * **Alan Heanue** - *Initial work* - (https://github.com/heanuea)
 
